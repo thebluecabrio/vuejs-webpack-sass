@@ -23,9 +23,7 @@ module.exports = {
     extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
-      {{#if_eq build "standalone"}}
       'vue$': 'vue/dist/vue.common.js',
-      {{/if_eq}}
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components')
@@ -35,7 +33,6 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   module: {
-    {{#lint}}
     preLoaders: [
       {
         test: /\.vue$/,
@@ -50,7 +47,6 @@ module.exports = {
         exclude: /node_modules/
       }
     ],
-    {{/lint}}
     loaders: [
       {
         test: /\.vue$/,
@@ -84,11 +80,9 @@ module.exports = {
       }
     ]
   },
-  {{#lint}}
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
-  {{/lint}}
   vue: {
     loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
     postcss: [

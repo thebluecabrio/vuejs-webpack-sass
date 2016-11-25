@@ -1,6 +1,20 @@
-# {{ name }}
+# VueJS webpack sass template
 
-> {{ description }}
+> A Vue.js project
+
+Taken from the vuejs-templates/webpack project and added sass
+
+Steps:
+
+### Install vue-cli
+``` bash
+$ npm install -g vue-cli
+```
+
+### Usage
+``` bash
+$ vue init thebluecabrio/vuejs-webpack-sass <project-name>
+```
 
 ## Build Setup
 
@@ -13,21 +27,15 @@ npm run dev
 
 # build for production with minification
 npm run build
-{{#unit}}
 
 # run unit tests
 npm run unit
-{{/unit}}
-{{#e2e}}
 
 # run e2e tests
 npm run e2e
-{{/e2e}}
-{{#if_or unit e2e}}
 
 # run all tests
 npm test
-{{/if_or}}
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

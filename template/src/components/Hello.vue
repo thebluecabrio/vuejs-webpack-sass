@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>\{{ msg }}</h1>
+    <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -23,16 +23,19 @@
 <script>
 export default {
   name: 'hello',
-  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
+  data () {
     return {
-      msg: 'Welcome to Your Vue.js App'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+
+$vue-green: #42b983;
+
 h1, h2 {
   font-weight: normal;
 }
@@ -48,6 +51,6 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: $vue-green;
 }
 </style>
